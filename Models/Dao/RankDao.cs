@@ -43,7 +43,7 @@ namespace DotnetCoreServer.Models
                         {
                             rank++;
                             RankUser user = new RankUser();
-                            user.UserID = reader.GetInt64(0);
+                            user.UserID = reader.GetInt32(0);
                             user.FacebookID = reader.GetString(1);
                             user.FacebookName = reader.GetString(2);
                             user.FacebookPhotoURL = reader.GetString(3);
@@ -95,7 +95,7 @@ namespace DotnetCoreServer.Models
                         {
                             rank++;
                             RankUser user = new RankUser();
-                            user.UserID = reader.GetInt64(0);
+                            user.UserID = reader.GetInt32(0);
                             user.FacebookID = reader.GetString(1);
                             user.FacebookName = reader.GetString(2);
                             user.FacebookPhotoURL = reader.GetString(3);
