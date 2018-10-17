@@ -52,7 +52,7 @@ namespace DotnetCoreServer.Models
             }
             return null;
         }
-        //수정
+        
         public User GetUser(int UserID){
             User user = new User();
             using(MySqlConnection conn = db.GetConnection())
