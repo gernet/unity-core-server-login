@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace DotnetCoreServer.Models
 {
     public interface IStageResultDao{
-        bool InsertStageRecord(long UserID, int Point);
+        bool InsertStageRecord(int UserID, int Point);
     }
 
     public class StageResultDao : IStageResultDao
@@ -16,7 +16,7 @@ namespace DotnetCoreServer.Models
             this.db = db;
         }
 
-        public bool InsertStageRecord(long UserID, int Point){
+        public bool InsertStageRecord(int UserID, int Point){
             
             string query = String.Format(
                 @"INSERT INTO tb_stage_record 

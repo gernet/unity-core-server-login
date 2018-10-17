@@ -7,7 +7,7 @@ namespace DotnetCoreServer.Models
 {
     public interface IUserDao{
         User FindUserByFUID(string FacebookID);
-        User GetUser(long UserID);
+        User GetUser(int UserID);
         User InsertUser(User user);
         bool UpdateUser(User user);
     }

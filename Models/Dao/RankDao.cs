@@ -6,7 +6,7 @@ namespace DotnetCoreServer.Models
 {
     public interface IRankDao{
         List<RankUser> TotalRank(int Start, int Count);
-        List<RankUser> FriendRank(long UserID, List<string> FacebookIDList);
+        List<RankUser> FriendRank(int UserID, List<string> FacebookIDList);
     }
 
     public class RankDao : IRankDao
@@ -63,7 +63,7 @@ namespace DotnetCoreServer.Models
 
         }
         
-        public List<RankUser> FriendRank(long UserID, List<string> FacebookIDList){
+        public List<RankUser> FriendRank(int UserID, List<string> FacebookIDList){
 
             for(int i = 0; i < FacebookIDList.Count; i++){
                 FacebookIDList[i] = string.Format("'{0}'", FacebookIDList[i]);
