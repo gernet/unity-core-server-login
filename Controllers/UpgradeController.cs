@@ -43,13 +43,13 @@ namespace DotnetCoreServer.Controllers
             User user = this.userDao.GetUser(request.UserID);
             UpgradeData upgradeInfo = null;
             if("Health".Equals(request.UpgradeType)){
-                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.HealthLevel + 1);
+                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.HealthLevel);
             }else if("Damage".Equals(request.UpgradeType)){
-                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.HealthLevel + 1);
+                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.HealthLevel);
             }else if("Defense".Equals(request.UpgradeType)){
-                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.HealthLevel + 1);
+                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.HealthLevel);
             }else if("Speed".Equals(request.UpgradeType)){
-                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.HealthLevel + 1);
+                upgradeInfo = this.upgradeDao.GetUpgradeInfo(request.UpgradeType, user.HealthLevel);
             }else{
                 // 유효하지 않은 업그레이드 타입입니다.
             }
