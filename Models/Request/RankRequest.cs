@@ -4,7 +4,7 @@ namespace DotnetCoreServer.Models{
     public class RankRequest
     {
         
-        public long UserID;
+        public int UserID;
         public List<string> FriendList;
     }
 }

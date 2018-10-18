@@ -5,7 +5,7 @@ namespace DotnetCoreServer.Models
     public class User
     {
 
-        public long UserID;
+        public int UserID;
         public string FacebookID;
         public string FacebookName;
         public string FacebookPhotoURL;

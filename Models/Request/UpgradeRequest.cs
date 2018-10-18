@@ -2,7 +2,7 @@
 namespace DotnetCoreServer.Models{
     public class UpgradeRequest
     {
-        public long UserID;
+        public int UserID;
         public string UpgradeType;
     }
 }

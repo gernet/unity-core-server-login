@@ -7,7 +7,7 @@ namespace DotnetCoreServer.Models
 {
     public interface IUserDao{
         User FindUserByFUID(string FacebookID);
-        User GetUser(long UserID);
+        User GetUser(int UserID);
         User InsertUser(User user);
         bool UpdateUser(User user);
     }
@@ -37,7 +37,7 @@ namespace DotnetCoreServer.Models
                     {
                         if (reader.Read())
                         {
-                            user.UserID = reader.GetInt64(0);
+                            user.UserID = reader.GetInt32(0);
                             user.FacebookID = reader.GetString(1);
                             user.FacebookName = reader.GetString(2);
                             user.FacebookPhotoURL = reader.GetString(3);
@@ -53,7 +53,7 @@ namespace DotnetCoreServer.Models
             return null;
         }
         
-        public User GetUser(long UserID){
+        public User GetUser(int UserID){
             User user = new User();
             using(MySqlConnection conn = db.GetConnection())
             {   
@@ -79,7 +79,7 @@ namespace DotnetCoreServer.Models
                     {
                         if (reader.Read())
                         {
-                            user.UserID = reader.GetInt64(0);
+                            user.UserID = reader.GetInt32(0);
                             user.FacebookID = reader.GetString(1);
                             user.FacebookName = reader.GetString(2);
                             user.FacebookPhotoURL = reader.GetString(3);
